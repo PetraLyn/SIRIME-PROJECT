@@ -26,4 +26,14 @@ Route::get('shop', function () {
 Route::get('login', function () {
     return view('login');
 });
+Route::get('info', function () {
+    return view('info');
+});
+Route::get('view', function () {
+    return view('view');
+});
+
+Route::get('/addProduct/{productId}', 'CartController@addItem');
+Route::get('/cart', 'CartController@showCart');
+Route::get('/removeItem/{productId}', 'CartController@removeItem');
 
