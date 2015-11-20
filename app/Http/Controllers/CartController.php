@@ -11,53 +11,36 @@ use App\Http\Controllers\Cart;
 class CartController extends Controller
 {
 
-    public function _construct()
-    {
-        // $this->cart = $cart;
-        $this->middleware('auth');
-    }
+    
 
-    public function addItem ($productId,$userid){
- 
-        $cart = Cart::where('user_id',Auth::user()->id)->first();
- 
-        if(!$cart){
-            $cart =  new Cart();
-            $cart->user_id=Auth::user()->id;
-            $cart->save();
-        }
- 
-        $cartItem  = new Cartitem();
-        $cartItem->product_id=$productId;
-        $cartItem->cart_id= $cart->id;
-        $cartItem->save();
- 
-        return redirect('/cart');
- 
+    public function addItem (){
+        $data = array(
+
+               array(
+                       'id'      => 1,
+                       'quantity'     => 1,
+                       'price'   => 00.00,
+                       'name'    => 'skin glow bleaching',
+                    ),
+               array(
+                       'id'      => 3,
+                       'quantity'     => 2,
+                       'price'   => 00.00,
+                       'name'    => 'sutla bleaching products'
+                    ),
+               array(
+                       'id'      => 5,
+                       'quantity'     => 1,
+                       'price'   => 00.00,
+                       'name'    => 'benars skin tighten'
+                    )
+            );
+       return view('view', ['data' => $data]);
+
+     }
+
+
+     public function checkout(){
+      return view('info');
+     }
     }
- 
-    public function showCart(){
-        $cart = Cart::where('user_id',Auth::user()->id)->first();
- 
-        if(!$cart){
-            $cart =  new Cart();
-            $cart->user_id=Auth::user()->id;
-            $cart->save();
-        }
- 
-        $items = $cart->cartItems;
-        $total=0;
-        foreach($items as $item){
-            $total+=$item->product->price;
-        }
-        dd($item);
-        return view('cart.view',['items'=>$items,'total'=>$total]);
-    }
- 
-    public function removeItem($id){
- 
-        CartItem::destroy($id);
-        return redirect('/cart');
-         // return Redirect::route('cart-success');
-    }
-} 

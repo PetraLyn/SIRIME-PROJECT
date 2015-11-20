@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('about');
+});
+Route::get('about', function () {
+    return view('about');
 });
 Route::get('contact', function () {
     return view('contact');
@@ -32,8 +35,17 @@ Route::get('info', function () {
 Route::get('view', function () {
     return view('view');
 });
+Route::get('cate', function () {
+    return view('cate');
+});
 
-Route::get('/addProduct/{productId}', 'CartController@addItem');
-Route::get('/cart', 'CartController@showCart');
-Route::get('/removeItem/{productId}', 'CartController@removeItem');
+Route::get('/cart', 'CartController@addItem');
+Route::get('/info', 'CartController@checkout');
 
+Route::get('contact', 
+ ['as' => 'contact', 'uses' => 'AboutController@create']);
+ Route::post('contact', 
+  ['as' => 'contact_store', 'uses' => 'AboutController@store']);
+ Route::any('/queries',['as'=>'queries','uses' => 'QuerryController@search']);
+ //Route::controller('queries', 'QuerryController');
+// Route::get('/removeItem/{productId}', 'CartController@removeItem');
