@@ -1,0 +1,151 @@
+#container{margin: 0px auto;
+	         max-width:100%;
+	         height:auto;
+
+}
+#body{
+	max-width:100px;
+}
+a{text-decoration: none;
+color:#a95525;}
+#navigation li{
+	display: inline;
+	list-style-type: none;
+	float: right;
+	padding: 0px 40px;
+  margin-top:10px;
+}
+#navigation a{
+  text-decoration: none;
+	
+
+}
+/*#ks{
+border:1px solid black;
+width:100%;
+}*/
+#logo{float:left;}
+h3{text-align: center;
+color: #ffffff;}
+.form{
+  float:right;
+  padding: 0px 80px;
+  margin-top:10px;}
+  h2{
+		text-align: center;
+	}
+	#slide img{
+		
+		
+	}
+	 span { position: relative;
+	 }
+ #slider p{color:#ffffff;
+ 	padding-right: 10%; 
+   bottom: 50%; 
+   left:30%;
+   text-align:center;
+   position: absolute; font-size: 30%;
+   float:right;
+ 
+ }
+
+
+
+#slide p{
+padding-top:12%;
+	font-size: 30px;
+}
+
+#bleach{
+	background-image: url(../images/kambua.jpg);
+	height: 600px;
+	float: left;
+	width:47%;
+	background-repeat:no-repeat; 
+}
+#bleach b{text-decoration:none;
+         color: #a95525;  
+/*   float:left; */
+}
+#slim{
+	background-image: url(../images/m53.jpg);
+	float: right;
+	height:700px;
+	background-repeat: no-repeat;
+	padding-left: 500px;
+  
+		}
+#slim b{float:right;
+       text-align:center;
+ 
+}
+#tighten{background-image: url(../images/tight.jpg);
+  height: 750px;
+  margin-left:10px;
+  background-repeat:no-repeat; 
+margin-top: 600px;
+  margin-bottom:20px;
+  
+  }
+  #tighten b{color: #ae4e11;
+  	padding top:300%;}
+   
+	#bleach1{float:left;}
+	#bleach2{float:left;}
+	#bleach3{float:left;}
+#about{background-color: #c28765;
+padding:10px;}
+#about p{color:#ffffff;}
+   #direction{float:left;
+    padding-left:80px;
+   }
+#direction p{color:#ffffff;}
+   #form{
+    float: right;
+     color: #a95525;
+     margin-bottom: 100px;
+
+  }
+   #footer{display: inline;
+   	 color: #a95525;
+       }
+#footer a{color: #a95525;}
+
+   #category{float:left;
+     padding-left:80px; 
+     width:30%;
+     color: #a95525;
+             }
+   #SIRI_ME{float:left;
+   	width:30%;
+   padding-left:80px;
+color: #a95525;}
+
+   #Customer{float:left;
+     padding-left: 80px;
+}
+   #about{text-align: center;
+           height:238px;
+           margin:10px 10px 0px 10px ;}
+
+   #testimonials{text-align: center;
+                 background-color:#c99678;
+                 margin:10px;
+                height:250x;
+                padding:50px;}
+
+#testimonials p{color:#ffffff;}
+
+#contacts{background-color: #c99678;
+          height:420px;
+          padding:10px;}
+
+#end{background-color: #facc9b;
+     height:80px;
+  
+}
+#end p{padding:20px;
+  padding-top:20px;
+    text-align:center;
+}
