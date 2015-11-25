@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="header-top">
       		 <div class="logo">
-				<a href="index"><img src="assets/images/sirime-logo.png" alt=""/></a>
+				<a href="index"><img src="assets/images/log.png" alt=""/></a>
 			 </div>
 		   <div class="header_right">
 			 

@@ -44,26 +44,30 @@
 		});
 		</script>
 </head>
+
+</head>
 <body>
 <div id="navigation">
     <!-- <ul>
-      <li><a href="#shop.html">Shop</a></li>
-      <li><a  href="#contact.html">Contact</a></li>
-      <li><a href="#about.html">About</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a  href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
       <li><a class="active scroll" href="#home.html">Home</a></li>
     </ul> -->
     <ul class="nav1">
                     <li><a href="contact">Contact</a></li>
                     <li><a href="shop">Shop</a></li>
                   <li><a href="about">About</a></li>
-                                 </ul>
+
+               </ul>
   </div>
    <div class="logo">
 				<a href="about"><img src="assets/images/log.png" alt=""/></a>
 			 </div>
   
   <!--  <div class="form">
-     <form method="post" action="search" enctype="multipart/form-data">
+   {!! Form::open(array('route' => 'queries', 'class'=>'form navbar-form navbar-right searchform')) !!}
+     //<form method="post" action="search" enctype="multipart/form-data">
           <input method="text"placeholder="search product">
           <input type="submit" name="search" value="search">
      </form>
@@ -72,7 +76,7 @@
       <div class="container"> 
          <div class="header-top">
       		<!--  <div class="logo">
-				<a href="index.html"><img src="images/sirimelogo.png" alt=""/></a>
+				<img src="images/sirimelogo.png" alt=""/></a>
 			 </div> -->
 		  
           <div class="clearfix"></div>
@@ -115,10 +119,9 @@
    		 			<div class='clearfix'></div>
    		 		</ul>
    		 		<div class="cart_bg">
-
 	   		 	  <ul class="cart">
 	   		 		 <a href="checkout">
-					    <h4><i class="cart_icon"> </i><p>Cart: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><div class="clearfix"> </div></h4>
+					    <h4><i class="cart_icon"> </i><p>Cart: <span class=""></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</p><div class="clearfix"> </div></h4>
 					 </a>
 				     <h5 class="empty"><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></h5>
 				     <div class="clearfix"> </div>
@@ -126,10 +129,11 @@
 	   		 	</div>
 			  	<ul class="quick_access">
    		 			<li class="view_cart"><a href="checkout">View Cart</a></li>
-   		 			<li class="check"><a href="{{url('shop')}}">Checkout</a></li>
+   		 			<li class="check"><a href="checkout">Checkout</a></li>
    		 			<div class='clearfix'></div>
    		 		</ul>
    		 		<div class="search">
+	  			   {!! Form::open(array('route' => 'queries', 'class'=>'form navbar-form navbar-right searchform')) !!}
 	  			   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 				   <input type="submit" value="">
 	  			</div>
@@ -161,119 +165,45 @@
 						  </ul>
 						 <a href="#" class="link1">View all</a>
 				      </div> -->
-				</div>
-			   <div class="col-md-9">
-				<h3 class="m_1">Bleaching Products</h3>
-				 <div class="content_grid">
-				   <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	  <!--  <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/skin glow bleaching.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								 <div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">SKIN GLOW</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	   <!-- <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/slim_and_trim_velvet.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('cart')}}" class="button item_add item_1"> </a>		
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">SUTLA BLEACH</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							</div>
-		                    <!-- <div class="sale-box1"><span class="on_sale1 title_shop">New</span></div> -->	
-		                   </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1"> 
-				  	     <!--  <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/BODYSCRUB_ombra.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">JOLEN BLEACH</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				   </div>
-				   <div class="clearfix"></div>
+
+			   	    
+			   	    
+				     <div class="side_banner">
+					   
+					   <div class="banner_holder">
+						  
+					   </div>
+				     </div>
 			  </div>
-			  <div class="content_grid">
-				  <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	 <!--   <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/tony moli bleaching.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">TONY MOLY CREAM</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	      <!-- <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/Clinical-Bleaching-Cream.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">CLINICIANS CREAM</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1"> 
-				  	  <!--     <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/Daggett-Ramsdell bleaching-Cream.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">DAGGETT CREAM</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				       </div>
-				  <div class="clearfix"></div>
-			   </div>
-			   <h3 class="m_2">Slimming Products</h3>
+			  <div class="col-md-9">
+			    <div class="dreamcrub">
+			   	 <ul class="breadcrumbs">
+                   <!--  <li class="home">
+                       <a href="index.html" title="Go to Home Page">Home</a>&nbsp;
+                       <span>&gt;</span>
+                    </li> -->
+                    <li class="home">&nbsp;
+                        About&nbsp;
+                        <span>&gt;</span>&nbsp;
+                    </li>
+                    
+                </ul>
+                
+                <!-- <div class="clearfix"></div>
+			   </div> -->
+			   
+    	         
+                <div class="clearfix"></div>		
+		        </div>		
+				
+					<div class="clearfix">
+					<h3 class="m_1">About Us</h3>
+					SiriMe is an online platform that deals with the sale and delivery of discretely packaged products.These products include slimming products,bleaching products and skin tighteners where most people require atmost privacy and only want the results.
+	    </div>
+	    <br clear="all">
+	     <!-- <div class="clearfix"></div>		
+		        </div> -->
+		        <h3 class="m_2">Our Shop</h3>
 			   <div class="content_grid">
 			   		<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
 				  	 <!--   <a href="single.html"> -->
@@ -327,61 +257,14 @@
 		                 </a>
 				    </div>
 				    <div class="clearfix"></div>
-			    </div>
-			    <h3 class="m_2">Skin tighteners</h3>
-			   <div class="content_grid">
-			   		<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	  <!--  <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/benars skin tighten.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>		
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">BENARS</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem"> 
-				  	   <!-- <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/tightener1.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">CELLEX</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				    </div>
-				    <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1"> 
-				  	   <!--  <a href="single.html"> -->
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="assets/images/tightener2.jpg" class="img-responsive" alt=""/>
-								<a href="{{url('checkout')}}" class="button item_add item_1"> </a>	
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">CERVIL</p>
-								   </div>
-								   <span class="amount item_price">Kshs.00.00</span>
-								   <div class="clearfix"></div>
-							     </div>		
-							  </div>
-		                    </div>
-		                 </a>
-				   </div>
-				   <div class="clearfix"></div>
+			    </div>		
+				
+					<div class="clearfix">
+					<h3 class="m_1">Testimonials</h3>
+              <p>"I couldn't believe the change in just a few months.I hope my story will show people that losing weight doesn't have to be embarassing"</p>
+	    </div>
+
+<div class="clearfix"></div>
 			    </div>
 			  </div>
 			</div>
@@ -451,3 +334,6 @@
         </div>
 </body>
 </html>		
+
+	    
+   		

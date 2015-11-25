@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="header-top">
       		 <div class="logo">
-				<a href="index"><img src="assets/images/sirime-logo.png" alt=""/></a>
+				<a href="index"><img src="assets/images/log.png" alt=""/></a>
 			 </div>
 		   <div class="header_right">
 			 
@@ -94,14 +94,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					});
 			 </script>
 			 <div class="cart-header2">
-				
+<!-- 				 <div class="close2"> </div>
+ -->				  <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="assets/images/skin glow bleaching.jpg" class="img-responsive" alt="">
+						</div>
+					   <div class="cart-item-info">
+						
+						<ul class="qty">
+							<!-- <li><p>Size : 5ml</p></li> -->
+							<li><p></p></li>
+						</ul>
+							 <div class="delivery">
+							 <p></p>
+							 <span>Delivered within 24 hours right at your doorstep</span>
+							 <div class="clearfix"></div>
+				        </div>	
+					   </div>
+					   <div class="clearfix"></div>
+											
+				  </div>
 			  </div>		
 		 </div>
 		 <div class="col-md-3 cart-total">
-			 <a class="continue" href="{{url('info')}}">Continue to basket</a>
+		 	<a class="continue" href="{{url('info')}}">Continue to basket</a>
+			 <div class="price-details">
+				 <h3>Price Details</h3>
+				 <span>Total</span>
+				 <span class="total1">00.00</span>
+				 <span>Discount</span>
+				 <span class="total1"></span>
+				 <span>Delivery Charges</span>
+				 <span class="total1">00.00</span>
+				 <div class="clearfix"></div>				 
+			 </div>	
+			 <ul class="total_price">
+			   <li class="last_price"> <h4>TOTAL</h4></li>	
+			   <li class="last_price"><span>00.00</span></li>
+			   <div class="clearfix"> </div>
+			 </ul>
 			
-			 <a class="order" href="{{url('info')}}">Place Order</a>
-			 <div class="total-item">
+			 
+			 <div class="clearfix"></div>
+<!-- 			 <a class="order" href="{{url('info')}}">Place Order</a>
+ -->			<!--  <div class="total-item">
+				 <h3>OPTIONS</h3>
+				 <h4>COUPONS</h4>
+				 <a class="cpns" href="#">Apply Coupons</a> -->
+				 <!-- <p><a href="#">Log In</a> to use accounts - linked coupons</p> -->
+			 <!-- </div> -->
+			 <!-- <a class="continue" href="{{url('cart')}}">Continue to basket</a>
+			
+			 <a class="order" href="{{url('cart')}}">Place Order</a>
+			 <div class="total-item"> -->
 				
 			 </div>
 			</div>
@@ -124,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				
 				  <div class="footer-grid">
-					<h3>Newsletter</h3>
+					<h3 class="Newsletter">Newsletter</h3>
 					<p class="footer_desc">For more information about our products and services submit your email</p>
 					<div class="search_footer">
 			          <input type="text" class="text" value="Insert Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Insert Email';}">
@@ -137,12 +182,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <p class="f_text">Phone:  &nbsp;&nbsp;&nbsp;00-250-2131</p>
                     <p class="email">Email: &nbsp;&nbsp;&nbsp;<a href="malito:mail@demolink.org">sirime79@gmail.com</a></p>		
                  </div>
-				 <div class="clearfix"> </div>
+				 <div class="clearfix"></div>
 			</div>
 		</div>
-          
-
-
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files
+as needed -->
+<script type="application/javascript">
+    document.getElementByClass("Newsletter").innerHTML = localStorage.details;
+</script>  
 
         <div class="footer_bottom">
         	<div class="container">

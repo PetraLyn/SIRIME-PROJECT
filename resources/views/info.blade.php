@@ -21,35 +21,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
 
 <body>
+  
 
 <div id="container" class="form">
 <div class="header-top">
              
                
-             
-<form action="action_page">
+<input type="hidden" name="_token" value="{{ csrf_token() }}">           
   First name:<br>
-  <input type="text" text="firstname">
+  <input type="text" text="">
   <br>
   Last name:<br>
-  <input type="text" text="lastname" >
+  <input type="text" text="" >
   <br>
   Email:<br>
-  <input type="text" text="lastname" >
+  <input type="text" text="" >
   <br>
   Delivery address:<br>
-  <input type="text" text="lastname" >
+  <input type="text" text="" >
   <br>
   Telephone:<br>
-  <input type="text" text="lastname" >
+  <input type="text" text="" >
   <br>
-  Region:<br>
-  <input type="text" text="lastname" >
+  Location:<br>
+  <input type="text" text="" >
   <br>
   City:<br>
-  <input type="text" text="lastname" >
+  <input type="text" text="" >
   <br><br>
-  <input type="submit" value="Submit">
+ <input type="submit" onClick="parent.location='cate'" value='submit'>
 </form> 
 </div>
 </body>
